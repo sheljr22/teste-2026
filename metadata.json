@@ -1,6 +1,6 @@
 {
-  "name": "Remix: Maternidad Serena",
-  "description": "Una cálida y profesional página de agradecimiento para infoproductos de maternidad.",
+  "name": "Maternidad Serena: Intimidad y Conexión",
+  "description": "Página de upsell enfocada en la recuperación sexual y el fortalecimiento del vínculo de pareja en el posparto.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

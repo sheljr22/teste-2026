@@ -5,16 +5,17 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
   
-  /* Cores Customizadas */
-  --color-maternity-bg: #fffbf9;
-  --color-maternity-primary: #9d6b53;
-  --color-maternity-accent: #e6b8a2;
-  --color-maternity-soft: #f4e1d2;
-  --color-maternity-leaf: #a8b5af;
+  /* Cores Customizadas - Paleta Pastel */
+  --color-maternity-beige: #FDF5E6;
+  --color-maternity-rose: #E6B3B3;
+  --color-maternity-blue: #B2C2D1;
+  --color-maternity-lavender: #E6E0F8;
+  --color-maternity-ink: #5D4D4A;
+  --color-maternity-accent: #D4A5A5;
 }
 
 @layer base {
   body {
-    @apply font-sans bg-maternity-bg text-slate-800 antialiased;
+    @apply font-sans bg-maternity-beige text-maternity-ink antialiased;
   }
 }

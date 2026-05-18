@@ -4,7 +4,23 @@
  */
 
 import { motion } from "motion/react";
-import { CheckCircle2, Mail, Download, MessageCircle, ArrowRight, Instagram, Facebook, Globe } from "lucide-react";
+import { 
+  CheckCircle2, 
+  Leaf, 
+  Eye, 
+  ShieldCheck, 
+  Users, 
+  Heart, 
+  Coffee, 
+  BookOpen, 
+  Smartphone, 
+  Mail, 
+  Calendar,
+  Compass,
+  Sun,
+  HandHelping,
+  Flower2
+} from "lucide-react";
 
 export default function App() {
   const containerVariants = {
@@ -13,7 +29,7 @@ export default function App() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.3,
+        delayChildren: 0.2,
       },
     },
   };
@@ -24,100 +40,68 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-maternity-bg selection:bg-maternity-soft">
-      <main className="max-w-4xl mx-auto px-6 pt-20 pb-32 flex flex-col items-center justify-center min-h-[90vh]">
-        {/* Hero Section - Simple and Elegant */}
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="text-center space-y-8"
-        >
-          <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="bg-maternity-soft p-5 rounded-full inline-block mb-4 shadow-sm border border-white/50">
-              <CheckCircle2 className="w-14 h-14 text-maternity-primary" />
-            </div>
-          </motion.div>
-          
-          <div className="space-y-4">
+    <div className="min-h-screen bg-maternity-beige selection:bg-maternity-blue/30 text-maternity-ink overflow-x-hidden font-sans">
+      {/* Hero Upsell - Focus on Intimacy */}
+      <section className="relative pt-16 pb-24 px-6 overflow-hidden">
+        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="space-y-6"
+          >
+            <motion.div 
+              variants={itemVariants} 
+              className="inline-block bg-maternity-rose text-white px-8 py-4 rounded-2xl text-lg md:text-2xl font-black uppercase tracking-widest shadow-2xl shadow-maternity-rose/50 border-4 border-white/20 mb-6"
+            >
+              ⚠️ ¡Espera! No cierres esta página todavía
+            </motion.div>
+            
             <motion.h1 
               variants={itemVariants}
-              className="font-serif text-6xl md:text-8xl text-maternity-primary leading-tight font-medium"
+              className="font-serif text-5xl md:text-7xl leading-tight font-medium"
             >
-              ¡Bienvenida a bordo, mamá!
+              Recupera la <span className="italic text-maternity-accent">chispa</span> y la conexión con tu pareja
             </motion.h1>
             
             <motion.p 
               variants={itemVariants}
-              className="text-xl md:text-2xl text-maternity-primary/60 max-w-2xl mx-auto font-light leading-relaxed"
+              className="text-xl text-maternity-ink/70 max-w-2xl mx-auto font-light leading-relaxed"
             >
-              Tu pedido ha sido procesado con éxito. Todo está listo para que comiences este hermoso camino con nosotras. 
-              Pronto recibirás un correo electrónico con todos los detalles de tu acceso.
+              Ya tienes la guía de recuperación general. Pero, ¿estás lista para el desafío de la <span className="font-medium text-maternity-ink">intimidad después del bebé</span>? 
             </motion.p>
-          </div>
-
-          {/* Kiwify Upsell Block */}
-          <motion.div 
-            variants={itemVariants}
-            className="mt-12 py-10 px-6 bg-white/40 backdrop-blur-md rounded-[2.5rem] border border-maternity-soft shadow-xl shadow-maternity-primary/5 max-w-2xl mx-auto"
-          >
-            <div id="kiwify-upsell-jRFHpUQ" data-upsell-url="" data-downsell-url="" className="flex flex-col items-center">
-              <button 
-                id="kiwify-upsell-trigger-jRFHpUQ" 
-                className="pulse-upsell transition-all"
-                style={{
-                  backgroundColor: '#E84B3C',
-                  padding: '16px 24px',
-                  cursor: 'pointer',
-                  color: '#FFFFFF',
-                  fontWeight: '600',
-                  borderRadius: '12px',
-                  border: 'none',
-                  fontSize: '22px',
-                  width: '100%',
-                  maxWidth: '450px'
-                }}
-              >
-                ✅ Sí, acepto esta oferta especial✅
-              </button>
-              <div 
-                id="kiwify-upsell-cancel-trigger-jRFHpUQ" 
-                className="hover:text-red-600 transition-colors"
-                style={{
-                  marginTop: '1.5rem',
-                  cursor: 'pointer',
-                  fontSize: '16px',
-                  textDecoration: 'underline',
-                  fontFamily: 'sans-serif',
-                  opacity: 0.6
-                }}
-              >
-                ❌ No, me gustaría rechazar esta oferta❌
-              </div>
-            </div>
           </motion.div>
+        </div>
+      </section>
 
-          <motion.div variants={itemVariants} className="pt-10">
-             <div className="inline-block px-1 w-24 h-1 bg-maternity-accent/30 rounded-full" />
-          </motion.div>
+      {/* The Problem & The Solution */}
+      <main className="max-w-4xl mx-auto px-6 space-y-24 pb-32">
+        
+        {/* Pain Points Grid */}
+        <section className="grid md:grid-cols-3 gap-8">
+          {[
+            { icon: Heart, title: "Miedo al dolor", text: "Es normal sentir ansiedad por el contacto físico inicial." },
+            { icon: Coffee, title: "Fatiga extrema", text: "Cómo encontrar el deseo cuando lo único que quieres es dormir." },
+            { icon: Users, title: "Distanciamiento", text: "Evita convertirte en solo 'compañeros de cuarto'." }
+          ].map((item, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-8 bg-white/60 rounded-[2rem] border border-maternity-lavender/50 text-center space-y-4"
+            >
+              <item.icon className="w-10 h-10 mx-auto text-maternity-blue" />
+              <h3 className="font-serif text-xl">{item.title}</h3>
+              <p className="text-sm text-maternity-ink/60 font-light leading-relaxed">{item.text}</p>
+            </motion.div>
+          ))}
+        </section>
 
-          {/* Minimalist Support Link */}
-          <motion.div variants={itemVariants} className="pt-4">
-            <p className="text-sm text-maternity-primary/40 uppercase tracking-widest font-medium">
-              ¿Dudas? Escríbenos a <a href="mailto:arturaguiar884@gmail.com" className="hover:text-maternity-accent transition-colors">arturaguiar884@gmail.com</a>
-            </p>
-          </motion.div>
-        </motion.div>
+
       </main>
 
-      <footer className="py-12 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-maternity-primary/40 font-medium">
-          <p>© 2024 Maternidad Serena. Diseñado con amor para ti.</p>
-          <div className="flex gap-10">
-            <a href="#" className="hover:text-maternity-primary transition-colors">Términos legales</a>
-            <a href="#" className="hover:text-maternity-primary transition-colors">Política de privacidad</a>
-          </div>
-        </div>
+      <footer className="py-12 px-6 text-center border-t border-maternity-lavender/20 opacity-40">
       </footer>
     </div>
   );
