@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Maternidad Serena",
+  "description": "Una cálida y profesional página de agradecimiento para infoproductos de maternidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
