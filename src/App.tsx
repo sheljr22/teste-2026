@@ -84,7 +84,7 @@ export default function App() {
             { icon: Coffee, title: "Fatiga extrema", text: "Cómo encontrar el deseo cuando lo único que quieres es dormir." },
             { icon: Users, title: "Distanciamiento", text: "Evita convertirte en solo 'compañeros de cuarto'." }
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -98,6 +98,43 @@ export default function App() {
           ))}
         </section>
 
+        {/* Kiwify Upsell Widget */}
+        <section>
+          <div
+            style={{ textAlign: "center" }}
+            id="kiwify-upsell-jRFHpUQ"
+            data-upsell-url=""
+            data-downsell-url=""
+          >
+            <button
+              id="kiwify-upsell-trigger-jRFHpUQ"
+              style={{
+                backgroundColor: "#e6b3b3",
+                padding: "12px 16px",
+                cursor: "pointer",
+                color: "#000000",
+                fontWeight: 600,
+                borderRadius: "4px",
+                border: "1px solid #e6b3b3",
+                fontSize: "20px",
+              }}
+            >
+              ✅ Sí, acepto esta oferta especial.
+            </button>
+            <div
+              id="kiwify-upsell-cancel-trigger-jRFHpUQ"
+              style={{
+                marginTop: "1rem",
+                cursor: "pointer",
+                fontSize: "16px",
+                textDecoration: "underline",
+                fontFamily: "sans-serif",
+              }}
+            >
+              ❌ No, me gustaría rechazar esta oferta.
+            </div>
+          </div>
+        </section>
 
       </main>
 
