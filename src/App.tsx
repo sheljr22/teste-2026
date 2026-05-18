@@ -131,7 +131,7 @@ export default function App() {
                 fontFamily: "sans-serif",
               }}
             >
-              ❌ No, me gustaría rechazar esta oferta.✅
+              ❌ No, me gustaría rechazar esta oferta.
             </div>
           </div>
         </section>
